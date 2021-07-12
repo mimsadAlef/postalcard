@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://bayanbox.ir/download/8121225267319572787/firework.min-prowebplus.blog.ir.css">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/sahel-font@latest/dist/font-face.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="./font/font.css">
+    <title>postal card</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: sahel , sans-serif;
+            background: url(https://bayanbox.ir/view/8282622247455604245/jean.png);
+        }
+
+        .overlap {
+            z-index: 99999;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+        }
+
+        .overlap .door {
+            position: relative;
+            width: calc(50% - 0px);
+            height: 100%;
+            animation: slideright 5s linear normal;
+            transition: 3s linear;
+        }
+
+        .overlap .left {
+            transform-origin: left;
+            background: linear-gradient(to left, #f19d00, #FFBF00);
+        }
+
+        .overlap .right {
+            transform-origin: right;
+            background: linear-gradient(to right, #f19d00, #FFBF00);
+        }
+
+        .overlap .openbtn {
+            position: absolute;
+            top: calc(50vh - 50px);
+            left: calc(50vw - 50px);
+            background: green;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            transition: 1.5s;
+            line-height: 3.5;
+            font-weight: 900;
+            text-align: center;
+            font-size: xx-large;
+            border: 3px solid blueviolet;
+            font-family: 'Dima Shekasteh',sans-serif;
+        }
+
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            padding: 7px;
+            transform: translate(-50%, -50%);
+            width: 30vw;
+            height: 30vh;
+            z-index: -1;
+            text-align: center;
+            font-size: x-large;
+            font-weight: 900;
+            box-shadow: 3px 3px 3px #00000080;
+            border-radius: 15px;
+            background-color: blanchedalmond;
+        }
+        .content p {
+            font-size: small;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="overlap">
+            <div class="door right"></div>
+            <div class="door left"></div>
+            <div class="openbtn">شروع</div>
+        </div>
+        <div class="content">
+            پیوند بهشتی امام علی (ع) و حضرت زهرا (س) مبارک
+            <p>تهیه شده توسط <a href="https://mimsadAlef.blog.ir"> محمدصادق عبداللهی </a>تشکر ویژه از <a href="https://prowebplus.blog.ir">پرو وب پلاس</a></p>
+        </div>
+    </div>
+    <script>
+        document.querySelector(".openbtn").onclick = function () {
+            document.querySelector(".door.right").style.transform = "perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-90deg)"
+            document.querySelector(".door.left").style.transform = "perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(90deg)"
+            document.querySelector(".openbtn").style.opacity = "0"
+            var backgroundaudio = new Audio("bgmusic.mp3")
+            backgroundaudio.play()
+            setTimeout(function () { document.body.innerHTML = "<div class=\"pyro\"><div class=\"before\"></div><div class=\"after\"></div></div>" + document.body.innerHTML;document.querySelector(".overlap").remove()}, 3000)
+        }
+    </script>
+</body>
+
+</html>
