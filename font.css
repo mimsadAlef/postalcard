@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Dima Shekasteh';
+  src: url('Dima Shekasteh.eot');
+  src: url('Dima Shekasteh.eot?#iefix') format('embedded-opentype'),
+       url('Dima Shekasteh.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DimaShekastehFree';
+  src: url('DimaShekastehFree.svg#DimaShekastehFree') format('svg'),
+       url('DimaShekastehFree.ttf') format('truetype'),
+       url('DimaShekastehFree.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
